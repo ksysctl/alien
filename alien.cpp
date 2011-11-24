@@ -34,7 +34,7 @@ string convert(string alien, string source, string target)
 
 	/* convert x base to decimal */
 	for (i = 0; i < a_size; i++)
-		dec = dec + (source.find_first_of(alien[i]) * pow(s_size, a_size - 1 - i));
+		dec = dec + (source.find_first_of(alien[i]) * pow(static_cast<double>(s_size), (a_size - 1 - i)));
 
 	/* convert decimal to y base */
 	while (dec != 0)
